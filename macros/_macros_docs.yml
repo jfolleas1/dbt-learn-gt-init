@@ -8,3 +8,12 @@ macros:
       - name: decimals
         type: integer
         description: Number of decimals, default 2
+  - name: grant_select
+    description: A macro that grants select prics on target.schema to target.role unless otherwise specified
+    arguments:
+        - name: schema
+          type : string
+          description: description
+        - name: role
+          type : string
+          description: description
