@@ -35,10 +35,7 @@ models:
   jaffle_shop:
     staging:
       +materialized: view
-      +schema: staging
     marts:
-      +materialized: table
-    snowflake_spend:
       +materialized: table
     
 
