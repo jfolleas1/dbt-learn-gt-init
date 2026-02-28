@@ -21,5 +21,5 @@ with final as(
 select * from final 
 {% if is_incremental() %}
     -- this filter will only be applied on an incremental run
-    where order_date >= (select max(order_date) from {{ this }}) 
+    where order_date >= (select max(this.order_date) from {{ this }} AS this) 
 {% endif %}
